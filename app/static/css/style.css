@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #b9d2e4; /* fundo claro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/planodefundodoprojeto.png") no-repeat center center;
+    background-size: cover;
+
+
+}
+
+.container {
+    background: #ebf2f485; /* caixa branca */
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #000000c7; /* título azul escuro */
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #4A4A4A;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #02676ec9;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #9ce0ff;
+    outline: none;
+    box-shadow: 0 0 5px #D0D8F8;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background-color: #02473ede;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #0b4a356b;
+}
+
+.switch {
+    margin-top: 1rem;
+}
+
+.switch a {
+    color: #007442e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+.flash.success {
+    color: #2ECC71;
+    background: #DFF2E1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flash.error {
+    color: #E74C3C;
+    background: #FDE2E1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.flash-messages li.success { color: green; }
+.flash-messages li.error { color: red; }

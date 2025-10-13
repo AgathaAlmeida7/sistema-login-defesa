@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sistema Defesa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Mensagens flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form class="form" method="POST" action="{{ url_for('register') }}">
+            {{ form.hidden_tag() }}
+
+            <h2>Crie sua conta 🛡️</h2>
+            <p>Preencha as informações abaixo</p>
+
+            <div class="input-group">
+                {{ form.username.label }}
+                {{ form.username(class="input") }}
+            </div>
+
+            <div class="input-group">
+                {{ form.password.label }}
+                {{ form.password(class="input") }}
+            </div>
+
+            {{ form.submit(class="btn btn-primary") }}
+
+            <p class="switch">Já tem conta? <a href="{{ url_for('login') }}">Faça login</a></p>
+        </form>
+    </div>
+
+    <style>
+        /* Estilos para as mensagens flash */
+        .flash-messages {
+            margin-bottom: 15px;
+        }
+
+        .flash {
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .flash.success {
+            background-color: #2ECC71; /* Verde para sucesso */
+            color: #ffffff;
+        }
+
+        .flash.error {
+            background-color: #E74C3C; /* Vermelho para erro */
+            color: #ffffff;
+        }
+    </style>
+</body>
+
+</html>
